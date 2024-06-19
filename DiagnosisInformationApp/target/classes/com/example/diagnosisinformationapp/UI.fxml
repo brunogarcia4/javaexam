@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.diagnosisinformationapp.diagnosis.DiagnosisInformationAppController">
+    <children>
+        <Label text="Name: Bruno Garcia Pereira Souza     Student ID: 200565193" />
+        <HBox>
+            <children>
+                <Label text="Patient ID" />
+                <TextField fx:id="patientIDField" />
+                <Button text="Search" onAction="#searchDiagnosis" />
+            </children>
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </HBox>
+        <TableView fx:id="diagnosisTable">
+            <columns>
+                <TableColumn fx:id="symptomsColumn" text="Symptoms" />
+                <TableColumn fx:id="diagnosisColumn" text="Diagnosis" />
+                <TableColumn fx:id="medicinesColumn" text="Medicines" />
+                <TableColumn fx:id="wardRequiredColumn" text="Ward Required" />
+            </columns>
+        </TableView>
+        <HBox>
+            <children>
+                <Label text="Symptoms" />
+                <TextField fx:id="symptomsField" />
+                <Label text="Ward Required?" />
+                <CheckBox fx:id="wardRequiredCheckBox" />
+            </children>
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </HBox>
+        <HBox>
+            <children>
+                <Label text="Diagnosis" />
+                <TextField fx:id="diagnosisField" />
+            </children>
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </HBox>
+        <HBox>
+            <children>
+                <Label text="Medicines" />
+                <TextField fx:id="medicinesField" />
+            </children>
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </HBox>
+        <HBox>
+            <children>
+                <Button text="ADD" onAction="#saveDiagnosis" />
+                <Button text="Close" onAction="#closeApplication" />
+            </children>
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </HBox>
+    </children>
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+</VBox>
